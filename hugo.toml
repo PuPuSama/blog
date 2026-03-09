@@ -1,6 +1,6 @@
 baseURL = 'https://blog.pu0.me/'
 languageCode = 'zh-cn'
-title = 'pu0 的博客'
+title = '心有所向'
 theme = 'PaperMod'
 
 defaultContentLanguage = 'zh'
@@ -16,6 +16,10 @@ disableKinds = ['taxonomy', 'term']
   ShowBreadCrumbs = true
   ShowToc = true
   displayFullLangName = true
+
+  [params.homeInfoParams]
+    Title = '心有所向'
+    Content = '记录技术折腾、工作流、AI 协作，还有一些值得留下来的想法。'
 
 [menu]
   [[menu.main]]
