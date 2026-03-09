@@ -1,0 +1,30 @@
+baseURL = 'https://blog.pu0.me/'
+languageCode = 'zh-cn'
+title = 'pu0 的博客'
+theme = 'PaperMod'
+
+defaultContentLanguage = 'zh'
+
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowToc = true
+  displayFullLangName = true
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = '首页'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    identifier = 'posts'
+    name = '文章'
+    url = '/posts/'
+    weight = 2
