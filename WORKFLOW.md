@@ -9,7 +9,7 @@
 
 ## Recommended local workflow
 
-If you are not sure whether the remote repo changed, run:
+Before editing, sync first if you are not sure whether the remote repo changed:
 
 ```bash
 git pull --ff-only
@@ -17,13 +17,25 @@ git pull --ff-only
 
 Then edit your markdown files in Obsidian or any editor.
 
-When you're done:
+When you're done, prefer a focused workflow instead of `git add .`:
 
 ```bash
-git add .
-git commit -m "your message"
+git status --short
+git add content/drafts/your-draft.md
+git commit -m "blog: add your draft"
 git push
 ```
+
+For published articles, stage only the article and any intentionally related assets:
+
+```bash
+git status --short
+git add content/posts/your-post.md
+git commit -m "blog: update your post"
+git push
+```
+
+Avoid committing unrelated editor metadata, cache files, or accidental changes.
 
 ## Server publish workflow
 
@@ -44,4 +56,6 @@ That script does:
 
 - Final articles are mainly edited locally.
 - AI-generated content should go into `content/drafts/` first.
+- Move a draft into `content/posts/` only after manual review and cleanup.
+- `push draft` and `publish site` are different steps: pushing syncs source files; publishing rebuilds and deploys the site.
 - Avoid editing the same article in two places without syncing first.
