@@ -17,6 +17,13 @@ disableKinds = ['taxonomy', 'term']
   ShowToc = true
   displayFullLangName = true
 
+  [params.assets]
+    favicon = 'book.svg'
+    favicon16x16 = 'book.svg'
+    favicon32x32 = 'book.svg'
+    apple_touch_icon = 'book.svg'
+    safari_pinned_tab = 'book.svg'
+
   [params.homeInfoParams]
     Title = '心有所向'
     Content = '记录技术折腾、工作流、AI 协作，还有一些值得留下来的想法。'
