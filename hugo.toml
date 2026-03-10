@@ -18,11 +18,11 @@ disableKinds = ['taxonomy', 'term']
   displayFullLangName = true
 
   [params.assets]
-    favicon = 'book.svg'
-    favicon16x16 = 'book.svg'
-    favicon32x32 = 'book.svg'
-    apple_touch_icon = 'book.svg'
-    safari_pinned_tab = 'book.svg'
+    favicon = 'Coco.svg'
+    favicon16x16 = 'Coco.svg'
+    favicon32x32 = 'Coco.svg'
+    apple_touch_icon = 'Coco.svg'
+    safari_pinned_tab = 'Coco.svg'
 
   [params.homeInfoParams]
     Title = '心有所向'
