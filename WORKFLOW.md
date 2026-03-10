@@ -17,25 +17,17 @@ git pull --ff-only
 
 Then edit your markdown files in Obsidian or any editor.
 
-When you're done, prefer a focused workflow instead of `git add .`:
+When you're done:
 
 ```bash
 git status --short
-git add content/drafts/your-draft.md
-git commit -m "blog: add your draft"
+git add -A
+git commit -m "your message"
 git push
 ```
 
-For published articles, stage only the article and any intentionally related assets:
-
-```bash
-git status --short
-git add content/posts/your-post.md
-git commit -m "blog: update your post"
-git push
-```
-
-Avoid committing unrelated editor metadata, cache files, or accidental changes.
+This repo already ignores editor metadata and build output, so `git add -A` is acceptable here for normal use.
+If `git status --short` shows something surprising, stop and check before committing.
 
 ## Server publish workflow
 
@@ -57,5 +49,6 @@ That script does:
 - Final articles are mainly edited locally.
 - AI-generated content should go into `content/drafts/` first.
 - Move a draft into `content/posts/` only after manual review and cleanup.
+- Renaming or moving a draft into `content/posts/` is fine; `git add -A` will correctly record the move/delete pair.
 - `push draft` and `publish site` are different steps: pushing syncs source files; publishing rebuilds and deploys the site.
 - Avoid editing the same article in two places without syncing first.
