@@ -8,26 +8,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Build
-        run: hugo --minify
-
       - name: Deploy to server
-        uses: easingthemes/ssh-deploy@v5
+        uses: appleboy/ssh-action@v1
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ secrets.SERVER_HOST }}
-          REMOTE_USER: ${{ secrets.SERVER_USER }}
-          REMOTE_PORT: ${{ secrets.SERVER_PORT }}
-          SOURCE: public/
-          TARGET: /var/www/blog.pu0.me/
-          ARGS: -rlgoDzvc --delete
-          SCRIPT_AFTER: chown -R caddy:caddy /var/www/blog.pu0.me
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          script: /root/.openclaw/workspace/publish-blog.sh
