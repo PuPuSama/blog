@@ -4,3 +4,4 @@ resources/_gen/
 .obsidian/
 content/.obsidian/
 content/**/.obsidian/
+.claude/
