@@ -6,7 +6,6 @@ theme = 'PaperMod'
 defaultContentLanguage = 'zh'
 
 disableKinds = ['taxonomy', 'term']
-ignoreFiles = ['/drafts/']
 
 [params]
   defaultTheme = 'auto'
