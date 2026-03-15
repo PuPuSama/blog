@@ -5,7 +5,7 @@ theme = 'PaperMod'
 
 defaultContentLanguage = 'zh'
 
-disableKinds = ['taxonomy', 'term']
+# disableKinds = ['taxonomy', 'term']
 
 [params]
   defaultTheme = 'auto'
