@@ -1,7 +1,7 @@
 ---
 title: "Hugo + PaperMod 写作指南：Front Matter 模板、Draft 草稿与发布流程"
-date: 2026-03-13T00:00:00Z
-lastmod: 2026-03-13T00:00:00Z
+date: 2026-03-13T00:00:00+08:00
+lastmod: 2026-03-13T00:00:00+08:00
 draft: false
 categories: ["Blog"]
 tags: ["Hugo", "PaperMod", "写作", "工作流"]
